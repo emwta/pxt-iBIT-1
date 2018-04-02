@@ -78,7 +78,7 @@ namespace iBIT {
       */
     //% blockId="ibit_Motor" block="Motor %motor|speed %speed"
     //% speed.min=0 speed.max=100
-    //% weight=95
+    //% weight=99
     export function Motor(Motor: motor, speed: number): void {  
         let motorspeed = pins.map(speed,0,100,0,1023)     
         if (Motor == motor.Forward) {
@@ -100,7 +100,7 @@ namespace iBIT {
       */
     //% blockId="ibit_Turn" block="Turn %motor|speed %speed"
     //% speed.min=0 speed.max=100
-    //% weight=90
+    //% weight=98
     export function Turn(Turn: turn, speed: number): void {       
       let motorspeed = pins.map(speed,0,100,0,1023)      
         if (Turn == turn.Left) {           
@@ -122,7 +122,7 @@ namespace iBIT {
       */
     //% blockId="ibit_Spin" block="Spin %motor|speed %speed"
     //% speed.min=0 speed.max=100
-    //% weight=85
+    //% weight=97
     export function Spin(Spin: spin, speed: number): void {   
         let motorspeed = pins.map(speed,0,100,0,1023)    
         if (Spin == spin.Left) {
@@ -143,7 +143,7 @@ namespace iBIT {
       * 
       */
     //% blockId="ibit_MotorStop" block="Motor Stop"
-    //% weight=80
+    //% weight=96
     export function MotorStop():void{
         pins.digitalWritePin(DigitalPin.P13, 1)
         pins.analogWritePin(AnalogPin.P14, 0)
@@ -156,7 +156,7 @@ namespace iBIT {
       *
       */
     //% blockId="ibit_readADC" block="Read %readADC"
-    //% weight=60
+    //% weight=93
     export function ReadADC(ReadADC:readADC): number{ 
             let ADCValue:number;
 
@@ -175,7 +175,7 @@ namespace iBIT {
      */
     //% blockId="ibit_Servo" block="Servo %servo|Degree %Degree"
     //% Degree.min=0 Degree.max=180
-    //% weight=75
+    //% weight=95
     export function Servo(Servo:servo, Degree:number): void{
         if(Servo == servo.SV1){
             pins.servoWritePin(AnalogPin.P8, Degree)
@@ -189,7 +189,7 @@ namespace iBIT {
      * Control Servo 1 or 2 set to freedom
      */
     //% blockId="ibit_ServoStop" block="Servo Stop %servo"
-    //% weight=70
+    //% weight=94
     export function ServoStop(Servo:servo): void{
         if(Servo == servo.SV1){
            pins.servoSetPulse(AnalogPin.P8, 0)
